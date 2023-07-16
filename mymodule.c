@@ -10,7 +10,8 @@ static PyObject* new_frame_eval(PyThreadState *state, PyFrameObject *frame, int 
 #else
 static PyObject* new_frame_eval(PyFrameObject *frame, int throwflag){
 #endif
-    printf("hello, world!\n");
+    printf("hello, world! ");
+    printf("From this function: %s\n", PyUnicode_AsUTF8(frame->f_code->co_name));
 #if PY_VERSION_HEX >= 0x03090000
     return _PyEval_EvalFrameDefault(state, frame, throwflag);
 #else
