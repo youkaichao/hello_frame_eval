@@ -7,7 +7,7 @@ It hooks the evaluation of each function by printing a `hello, world!` message f
 
 # Installation
 
-Just run `python setup.py install`.
+Just run `python setup.py develop`.
 
 It works for python 3.6 and above.
 
